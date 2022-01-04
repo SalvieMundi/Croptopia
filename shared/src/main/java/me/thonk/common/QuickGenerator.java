@@ -16,7 +16,7 @@ public class QuickGenerator {
             ArrayList<String> variableNames = createForgeItemVariable(clazz);
             createForgeItemRegister(clazz, variableNames);
             createFabricItemVariable(variableNames);
-            createFabrcItemRegister(clazz, variableNames);
+            createFabricItemRegister(clazz, variableNames);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
@@ -81,7 +81,7 @@ public class QuickGenerator {
         System.out.println("Fab Item Var End");
     }
 
-    private static void createFabrcItemRegister(Class<?> clazz, ArrayList<String> varNames) {
+    private static void createFabricItemRegister(Class<?> clazz, ArrayList<String> varNames) {
         System.out.println("Fab Item Reg Begin");
         Field[] fields = getFields(clazz);
         for (int i = 0; i < varNames.size(); i++) {
@@ -90,9 +90,6 @@ public class QuickGenerator {
         }
         System.out.println("Fab Item Reg End");
     }
-
-
-
 
     private static Field[] getFields(Class<?> clazz) {
         return clazz.getFields();

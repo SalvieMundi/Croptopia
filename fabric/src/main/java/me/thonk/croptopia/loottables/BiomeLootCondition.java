@@ -74,7 +74,7 @@ public class BiomeLootCondition implements LootCondition {
             JsonArray array = JsonHelper.getArray(json, "biome_category");
             Set<Biome.Category> categories = new HashSet<>();
             for (JsonElement jsonElement : array) {
-                categories.add(Biome.Category.byName(json.getAsString()));
+                categories.add(Biome.Category.byName(jsonElement.getAsString()));
             }
             return new BiomeLootCondition(categories);
         }
